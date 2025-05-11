@@ -1,9 +1,8 @@
 # ETL Pipeline Project: Large CSV Processing
-
-This project downloads, transforms, and loads a large CSV dataset into a SQL database using Python. It handles the data in chunks to ensure memory efficiency and includes logging and error handling.
+ETL Project downloads, transforms, and loads a large CSV dataset into a SQL database using Python. It handles the data in chunks to ensure memory efficiency and includes logging and error handling.
 
 ## Features
-- Downloads a compressed CSV from a remote URL
+- Downloads a compressed CSV from a remote URL where size is as huge as 1.5GB
 - Cleans and transforms data using Pandas
 - Stores the data in logically separated SQL tables
 - Processes data in chunks for memory optimization
@@ -26,11 +25,12 @@ mkdir etl_project && cd etl_project
 ### 2. Install requirements
 ```bash
 pip install pandas sqlalchemy requests
+(assuming python is preinstalled in system)
 ```
 
 ### 3. Files Structure
 ```
-- etl_pipeline.py       # Main Python script
+- etl_pyspark_Tyroo.py       # Main Python script
 - database_schema.sql   # Optional schema to pre-create tables
 - etl_pipeline.log      # Log file generated after execution
 ```
@@ -53,5 +53,4 @@ This will:
 ## Logging
 Logs will be stored in `etl_pipeline.log`. Check it for any errors or status updates.
 
-## License
-MIT License
+
